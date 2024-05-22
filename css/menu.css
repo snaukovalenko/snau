@@ -1,0 +1,193 @@
+header img {
+    width: 100%;
+    max-width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+header a:hover img {
+    transform: scale(1.1);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.3);
+    background-color: #EEFFF1;
+}
+
+.header_body {
+    max-width: 1180px;
+    margin: 0px auto;
+    padding: 0px 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.header_logo {
+    flex: 0 0 60px;
+    position: relative;
+    z-index: 5;
+}
+
+.header_burger {
+    display: none;
+}
+
+.header_menu {}
+
+.header_list {
+    display: flex;
+    position: relative;
+    z-index: 4;
+}
+
+.header_list li {
+    margin: 0px 0px 0px 30px;
+}
+
+.header_link {
+    color: #00a43c;
+    font-weight: 700;
+    font-size: 18px;
+	position: relative;
+}
+
+
+.header_link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00a43c;
+    transform: scaleX(0); 
+    transform-origin: center; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.header_link:hover::after {
+    transform: scaleX(1); 
+}
+
+
+
+@media (max-width: 910px) {
+    body.lock {
+        overflow: hidden;
+    }
+
+    .header_body {
+        height: 60px;
+    }
+
+    .header_logo {
+        flex: 0 0 50px;
+		margin-left: 10px;
+    }
+
+    .header_burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 5;
+        cursor: pointer; /* Додано для курсора */
+    }
+
+    /* Центрування середньої палички */
+    .header_burger span {
+        position: absolute;
+        background-color: #00a43c; /* Зелений колір */
+        left: 0;
+        width: 100%;
+        height: 3px;
+        top: 9px; /* Зменшено відступ */
+        transition: all 0.3s ease 0s;
+    }
+
+    /* Верхня паличка */
+    .header_burger:before {
+        content: '';
+        background-color: #00a43c; /* Зелений колір */
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        top: 1px; /* Зменшено відступ */
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    /* Нижня паличка */
+    .header_burger:after {
+        content: '';
+        background-color: #00a43c; /* Зелений колір */
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: 1px; /* Зменшено відступ */
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header_burger.active span {
+        transform: scale(0);
+    }
+
+    .header_burger.active:before {
+        transform: rotate(45deg);
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .header_burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
+
+    .header_menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #EEFFF1;
+        overflow: auto;
+        padding: 70px 10px 20px 10px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header_menu.active {
+        top: 0;
+    }
+
+    .header_list {
+        display: block;
+    }
+
+    .header_list li {
+        margin: 0px 0px 20px 0px;
+    }
+
+    .header_link {
+        font-size: 24px;
+    }
+}

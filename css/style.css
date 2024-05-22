@@ -1,0 +1,886 @@
+/*Обнулення стилів*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.5;
+	/* Значення у відсотках або в одиницях em */
+	letter-spacing: 1.5px;
+	/* Значення в пікселях */
+	color: #0E1621;
+background-color: #EEFFF1;
+	
+	overflow-wrap: break-word;
+	overflow: auto;
+	
+	
+/*	text-align: justify;*/
+}
+
+body::-webkit-scrollbar {
+	width: 0em;
+	/* Товщина смуги прокрутки */
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: transparent;
+	/* Колір смуги прокрутки */
+}
+
+
+
+
+
+
+
+
+[data-animate] {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate].visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* фото 1 блок */
+.content {
+    flex: 1 1 auto;
+    width: 100%;
+   margin:  20px 0px;
+	padding-top: 90px;
+   
+}
+
+.block_c {
+    width: 100%;
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+	
+	
+}
+
+
+
+
+.block_c h2{
+	
+	font-size: 20px;
+	font-weight: 800;
+	color: #00a43c;
+	padding-bottom: 20px;
+margin-left: 40px;
+	margin-top: 30px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+
+.p_text{
+
+	font-size: 18px;
+	font-weight: 600;
+	color: #2d3e50;
+	padding-bottom: 10px;
+    margin: 10px;
+	
+	width: 90%;
+	
+}
+
+
+
+@media (max-width: 1100px) {
+	
+
+.content {
+   
+   margin:  10px 0px;
+	padding-top: 50px;
+   
+}
+
+	.p_text{
+
+	font-size: 16px;
+	font-weight: 600;
+	color: #2d3e50;
+	padding-bottom: 10px;
+    margin: 10px;
+	
+}
+	
+}
+@media (max-width: 767px) {
+	
+
+.content {
+   
+   margin:  10px 0px;
+	padding-top: 80px;
+   
+}
+
+
+	
+}
+
+
+/* фото 1 блок */
+.block_img {
+    position: relative;
+    display: inline-block;
+	
+	
+}
+
+.img_container {
+    position: relative;
+    overflow: hidden; /* Щоб уникнути виходу зображення за межі контейнера при збільшенні */
+		box-shadow: 10px 20px 30px -2px rgba(0, 164, 60, 0.4);
+	border-radius: 20px;
+	
+}
+@media (max-width: 1275px) {
+.img_container {
+border-radius: 0px;
+
+}
+}
+
+.img_container img {
+    display: block;
+    width: 100%;
+    height: auto;
+   
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    
+    background: rgba(0, 0, 0, 0.4); /* менш помітне напівпрозоре чорне тло */
+    padding: 20px;
+    transition: background 0.3s ease; /* Плавна зміна фону при наведенні */
+}
+
+.overlay span {
+    margin-bottom: 10px;
+	padding-left: 30px;
+	font-size: 45px;
+	font-weight: 700;
+}
+.overlay p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+	
+	
+}
+
+
+.overlay a {
+    display: inline-block;
+    padding: 10px 20px; /* Розміри відступів кнопки */
+    background-color: #00a43c; /* Колір фону кнопки */
+    color: white; /* Колір тексту */
+    text-decoration: none; /* Відключення стандартного оформлення посилання */
+    border-radius: 20px; /* Закруглення кутів кнопки */
+    transition: background-color 0.3s ease; /* Плавна зміна кольору фону при наведенні */
+	transition: transform 0.3s ease;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+	font-size: 25px;
+	font-weight: 800;
+}
+
+.overlay a:hover {
+    background-color: #f4c400; /* Зміна кольору фону при наведенні */
+	 transform: translateY(-5px);
+	 
+}
+
+.img_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, transparent, rgba(0, 164, 60, 0.5)); /* димка кольору #00a43c */
+    opacity: 1; /* Забезпечення видимості димки */
+}
+
+@media (max-width: 800px) {
+
+	.img_container {
+border-radius: 0px;
+
+}
+	.overlay span {
+    margin-bottom: 10px;
+	padding-left: 10px;
+	font-size: 18px;
+	font-weight: 800;
+}
+	.overlay a {
+    display: inline-block;
+    padding: 5px 10px; /* Розміри відступів кнопки */
+    background-color: #00a43c; /* Колір фону кнопки */
+    color: white; /* Колір тексту */
+    text-decoration: none; /* Відключення стандартного оформлення посилання */
+    border-radius: 0px; /* Закруглення кутів кнопки */
+    transition: background-color 0.3s ease; /* Плавна зміна кольору фону при наведенні */
+	transition: transform 0.3s ease;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+	font-size: 18px;
+	font-weight: 800;
+}
+	
+	
+
+}
+@media (max-width: 600px) {
+
+	.img_container {
+border-radius: 0px;
+
+}
+	.overlay span {
+    margin-bottom: 5px;
+	padding-left: 5px;
+	font-size: 14px;
+	font-weight: 700;
+}
+	.overlay a {
+    display: inline-block;
+    padding: 5px 10px; /* Розміри відступів кнопки */
+    background-color: #00a43c; /* Колір фону кнопки */
+    color: white; /* Колір тексту */
+    text-decoration: none; /* Відключення стандартного оформлення посилання */
+    border-radius: 0px; /* Закруглення кутів кнопки */
+    transition: background-color 0.3s ease; /* Плавна зміна кольору фону при наведенні */
+	transition: transform 0.3s ease;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+	font-size: 14px;
+	font-weight: 800;
+}
+	
+	
+
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.block{
+	
+	display: flex;
+	
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.block img{
+	
+	width: 100%;
+	/* Займатиме 100% ширини батьківського контейнера */
+	max-width: 450px;
+	/* Максимальна ширина - 400px */
+	height: auto;
+	/* Автоматична висота, щоб зберігати пропорції */
+	
+		
+	
+}
+
+.block p{
+	
+	font-size: 20px;
+	font-weight: 600;
+	color: #2d3e50;
+	padding: 10px;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	
+}
+
+.block p img{
+	margin-right: 15px;
+	margin-top: 6px;
+	width: 100%;
+	/* Займатиме 100% ширини батьківського контейнера */
+	max-width: 30px;
+	/* Максимальна ширина - 400px */
+	height: auto;
+	/* Автоматична висота, щоб зберігати пропорції */
+	
+	transition: transform 0.1s ease;
+}
+.block p:hover  {
+	color: #00a43c;
+	
+}
+.block p:hover img {
+	transform: scale(1.1);
+	
+}
+
+.block h2{
+	
+	font-size: 26px;
+	font-weight: 800;
+	
+color: #f4c400;
+	padding: 10px;
+	margin-bottom: 20px;
+	
+}
+
+@media (max-width: 1100px) {
+	
+	
+.block img{
+	
+	width: 100%;
+	/* Займатиме 100% ширини батьківського контейнера */
+	max-width: 400px;
+	/* Максимальна ширина - 400px */
+	height: auto;
+	/* Автоматична висота, щоб зберігати пропорції */
+	
+		
+	
+}
+
+	
+	.block p{
+	
+	font-size: 16px;
+	
+	
+	
+}
+
+.block h2{
+	
+	font-size: 18px;
+
+	
+	padding: 5px;
+	margin-bottom: 5px;
+	
+}
+
+	
+}
+
+@media (max-width: 767px) {
+    .block_c {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+		margin-bottom: 10px;
+    }
+
+    .block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .block:nth-child(2) { /* Вибираємо другий блок */
+        align-items: flex-start; /* Вирівнюємо зліва */
+    }
+	
+	.block h2{
+	
+	font-size: 16px;
+	font-weight: 700;
+
+	
+}
+		.block p{
+	
+	font-size: 14px;
+	
+	
+	
+}
+	
+	.block p img{
+	margin-right: 10px;
+	margin-top: 6px;
+	width: 100%;
+	/* Займатиме 100% ширини батьківського контейнера */
+	max-width: 20px;
+	/* Максимальна ширина - 400px */
+	height: auto;
+	/* Автоматична висота, щоб зберігати пропорції */
+	
+	transition: transform 0.1s ease;
+}
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.block_logo{
+	display: flex;
+	
+
+	 
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.block_logo h3{
+	
+	font-size: 34px;
+	font-weight: 800;
+	
+color: #00a43c;
+	padding: 10px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+margin-right: 20px;
+	
+}
+.block_logo h3:hover {
+	
+	cursor: pointer;
+/*	 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+	
+}
+.block_logo h3 img{
+	margin-right: 2px;
+	margin-top: 3px;
+	width: 100%;
+	/* Займатиме 100% ширини батьківського контейнера */
+	max-width: 50px;
+	/* Максимальна ширина - 400px */
+	height: auto;
+	/* Автоматична висота, щоб зберігати пропорції */
+	
+	transition: transform 0.1s ease;
+}
+
+.block_logo h3:hover img {
+	transform: scale(1.1);
+	
+}
+
+@media (max-width: 1100px) {
+	
+
+
+.block_logo h3{
+	
+	font-size: 24px;
+	font-weight: 800;
+
+	padding: 5px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+margin-right: 10px;
+	
+}
+
+.block_logo h3 img{
+
+	max-width: 30px;
+	/* Максимальна ширина - 400px */
+	
+}
+	
+}
+@media (max-width: 767px) {
+	
+
+
+.block_logo h3{
+	
+	font-size: 20px;
+	font-weight: 700;
+
+
+	margin-bottom: 5px;
+	margin-left: 10px;
+margin-right: 5px;
+	
+}
+
+.block_logo h3 img{
+
+	max-width: 30px;
+	/* Максимальна ширина - 400px */
+	
+}
+	
+}
+
+.block_cp {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+	
+	
+}
+
+.block_p{
+	
+
+	
+	width: 50%;
+	
+	display: flex; 
+	justify-content: flex-start; 
+	align-items: flex-end; 
+	flex-wrap: wrap;
+}
+.block_p img{
+	
+width: 100%;
+	/* Займатиме 100% ширини батьківського контейнера */
+	max-width: 100%;
+	/* Максимальна ширина - 400px */
+	height: auto;
+	/* Автоматична висота, щоб зберігати пропорції */
+	
+	
+}
+
+.block_p p{
+	
+
+	margin-right: 20px;
+	margin-left: 20px;
+	padding: 10px;
+}
+
+
+
+@media (max-width: 1100px) {
+	
+	.block_cp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+		flex-wrap: wrap;
+	
+	
+}
+	
+
+.block_p{
+	
+	width: 100%;
+	
+	display: flex; 
+	justify-content: center; 
+	align-items: flex-end; 
+	flex-wrap: wrap;
+}
+.block_p img{
+	
+width: 100%;
+	/* Займатиме 100% ширини батьківського контейнера */
+	max-width: 100%;
+	/* Максимальна ширина - 400px */
+	height: auto;
+	/* Автоматична висота, щоб зберігати пропорції */
+	
+	
+}
+
+.block_p p{
+	
+
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 10px;
+}
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+footer {
+
+	width: 100%;
+	min-height: 100px;
+	color: #FDFFF5;
+
+	background-color: #00a43c;
+	
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.block_footer{
+	width: 80%;
+	margin: auto;
+	
+	color: #FDFFF5;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	
+}
+
+.block_footer ul{
+	
+	display: flex;
+	flex-direction: column;
+	
+	justify-content: center;
+	align-items: flex-start;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 10px;
+}
+.block_footer ul li{
+	
+	margin-bottom: 10px;
+
+}
+.block_footer ul li a{
+	
+	  font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    padding: 10px;
+	
+	display: flex;
+	align-items: center;
+
+}
+
+.block_footer ul li a img {
+    width: 100%;
+    max-width: 30px;
+	margin-right: 10px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.block_footer ul li a:hover img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1000px) {
+	
+
+	.block_footer{
+	width: 95%;
+	margin: auto;
+	
+	color: #FDFFF5;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+		
+		flex-wrap: wrap;
+	
+}
+
+.block_footer ul{
+	
+	display: flex;
+	flex-direction: column;
+	
+	justify-content: center;
+	align-items: flex-start;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 10px;
+}
+.block_footer ul li {
+ 
+	margin-bottom: 10px;
+
+}
+.block_footer ul li a{
+	
+	  font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    padding: 5px;
+	
+	display: flex;
+	align-items: center;
+
+}
+
+.block_footer ul li a img {
+    width: 100%;
+    max-width: 25px;
+	margin-right: 8px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+
+	
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.block_line{
+	
+	min-height: 5px;
+	
+	width: 90%;
+	margin: auto;
+	margin-bottom: 10px;
+	background-color: #00a43c;
+	border-radius: 20px;
+	
+	
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* для розмірів екрану менше 768px */
+@media only screen and (max-width: 768px) {}
+
+/* для розмірів екрану менше 480px */
+@media only screen and (max-width: 480px) {}

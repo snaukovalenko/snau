@@ -1,0 +1,227 @@
+
+/*Блоки зв сталою висотою*/
+.accordion {
+	transform: translateZ(0);
+	background: #F5FFF7;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.accordion  .accordion-toggle {
+	display: none;
+	position: absolute;
+	opacity: 0;
+}
+
+.accordion  label {
+	display: block;
+	position: relative;
+	height: 60px;
+	padding: 0 20px;
+	margin-bottom: 2px;
+	border-bottom: 2px solid #00a43c;
+	background-color: #EEFFF1;
+	color: #00a43c;
+	font-size: 18px;
+	font-weight: 800;
+	cursor: pointer;
+}
+
+.accordion label {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.accordion label img {
+	width: 100%;
+	max-width: 26px;
+	height: auto;
+	transition: transform 0.1s ease;
+}
+
+.accordion label:hover img {
+	transform: scale(1.1);
+}
+
+.accordion  label:after {
+	content: '';
+	position: absolute;
+	top: 12px;
+	right: 20px;
+	width: 12px;
+	height: 12px;
+	transform: rotate(-135deg);
+	transition: 0.4s transform;
+}
+
+.accordion  section {
+	overflow: hidden;
+	height: 0;
+	transition: height 0.4s ease;
+	/* Плавний перехід висоти */
+}
+
+.accordion  .accordion-toggle:checked ~ label:after {
+	transform: rotate(45deg);
+	top: 16px;
+}
+
+.accordion  .accordion-toggle:checked ~ section {
+	height: 295px;
+	/* Максимальна висота блоку */
+	overflow-y: auto;
+	/* Вертикальна прокрутка при потребі */
+}
+
+.accordion  .accordion-toggle:checked ~ label img {
+	transform: rotate(180deg);
+}
+
+.accordion  section p {
+	margin: 15px 0;
+	padding: 0 20px;
+}
+
+/* Користувацькі стилі смуги прокрутки */
+.accordion  section::-webkit-scrollbar {
+	width: 8px;
+	/* Ширина смуги прокрутки */
+
+	cursor: pointer;
+	/* Змінити курсор при наведенні */
+}
+
+.accordion  section::-webkit-scrollbar-thumb {
+	background-color: #00a43c;
+	/* Колір бігунка */
+	border-radius: 10px;
+	/* Заокруглені краї бігунка */
+
+}
+
+.accordion  section::-webkit-scrollbar-track {
+	background-color: #EEFFF1;
+	/* Колір треку */
+	border-radius: 10px;
+	/* Заокруглені краї треку */
+
+}
+
+
+/*////////////////////////////////////////////////////////////*/
+
+/*//////////////////////////////////////////////////////////*/
+
+/*Блоки видвижні*/
+
+
+.block_panel {
+
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+}
+
+
+
+
+.collapsible {
+
+	margin-bottom: 5px;
+	
+	color: #00a43c;
+	font-weight: 800;
+	font-size: 18px;
+	cursor: pointer;
+	padding: 5px;
+
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	background-color: #EEFFF1;
+	box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.5);
+	/* Додає тінь внизу шапки */
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+
+
+
+.block_panel .collapsible img {
+	width: 100%;
+	/* Займатиме 100% ширини батьківського контейнера */
+	max-width: 60px;
+	/* Максимальна ширина - 400px */
+	height: auto;
+	/* Автоматична висота, щоб зберігати пропорції */
+
+	padding: 10px;
+	transition: transform 0.1s ease;
+}
+
+.block_panel .collapsible:hover img {
+	transform: scale(1.1);
+}
+
+
+.block_panel .panel {
+
+	max-height: 0;
+	margin-top: 5px;
+	overflow: hidden;
+	transition: max-height 0.3s ease-in-out;
+	background-color: #F5FFF7;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+
+
+@media (max-width: 1100px) {
+
+	.block_panel {
+
+		width: 95%;
+
+	}
+	.block_panel .collapsible {
+
+
+		font-size: 16px;
+
+	}
+
+	.block_panel .collapsible img {
+		width: 100%;
+		max-width: 45px;
+		height: auto;
+		transition: transform 0.1s ease;
+	}
+
+
+	.accordion  label {
+
+		font-size: 16px;
+
+	}
+.accordion label img {
+	width: 100%;
+	max-width: 20px;
+	height: auto;
+	transition: transform 0.1s ease;
+}
+
+}
