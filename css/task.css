@@ -81,10 +81,15 @@ margin-left: 40px;
 		
 		 display: none;
 	}
+	#img_container_planshet {
+	
+		
+		 display: none;
+	}
+	
 
 
-
-@media (max-width: 1000px) {
+@media (max-width: 1250px) {
 	
 	
 	.task_panel{
@@ -92,26 +97,25 @@ margin-left: 40px;
 
 	margin: 10px;
 
-
-	
 	
 }
-	#img_container_phone{
-		
-		 display: block;
-	}
+	
 
-
-		  #task_img_container {
-        display: none; /* Приховуємо зображення з ідентифікатором #task_img_container на екранах менше 600px */
-    }
 	
 	
 }
 @media (max-width: 1100px) {
 	
 	
-
+	#img_container_planshet {
+	
+		
+		 display: block;
+	}
+	
+		  #task_img_container {
+        display: none; /* Приховуємо зображення з ідентифікатором #task_img_container на екранах менше 600px */
+    }
 	
 .block_task h2{
 	
@@ -161,4 +165,22 @@ margin: 10px;
 }
 }
 
+@media (max-width: 500px) {
+	
+		#img_container_planshet {
+	
+		
+		 display: none;
+	}
+	
+	
+	#img_container_phone{
+		
+		 display: block;
+	}
 
+
+		  #task_img_container {
+        display: none; /* Приховуємо зображення з ідентифікатором #task_img_container на екранах менше 600px */
+    }
+}
