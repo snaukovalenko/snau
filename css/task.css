@@ -77,6 +77,10 @@ margin-left: 40px;
 	transition: transform 0.3s ease;
 }
 }
+	#img_container_phone{
+		
+		 display: none;
+	}
 
 
 
@@ -92,6 +96,10 @@ margin-left: 40px;
 	
 	
 }
+	#img_container_phone{
+		
+		 display: block;
+	}
 
 
 		  #task_img_container {
