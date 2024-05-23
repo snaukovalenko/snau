@@ -447,9 +447,9 @@ border-radius: 0px;
 
 }
 	.overlay span {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 	padding-left: 5px;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 700;
 }
 	.overlay a {
@@ -462,7 +462,7 @@ border-radius: 0px;
     transition: background-color 0.3s ease; /* Плавна зміна кольору фону при наведенні */
 	transition: transform 0.3s ease;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 800;
 }
 	
@@ -476,9 +476,9 @@ border-radius: 0px;
 
 }
 	.overlay span {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 	padding-left: 5px;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 700;
 }
 	.overlay a {
@@ -491,7 +491,7 @@ border-radius: 0px;
     transition: background-color 0.3s ease; /* Плавна зміна кольору фону при наведенні */
 	transition: transform 0.3s ease;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 800;
 }
 	
