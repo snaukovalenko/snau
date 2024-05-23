@@ -204,12 +204,42 @@ margin-left: 40px;
 	
 	width: 90%;
 	
+	display: flex;
+	align-items: flex-start;
+	
+}
+.p_text img{
+
+	width: 100%;
+	/* Займатиме 100% ширини батьківського контейнера */
+	max-width: 50px;
+	/* Максимальна ширина - 400px */
+	height: auto;
+	/* Автоматична висота, щоб зберігати пропорції */
+	margin-right: 20px;
+	transition: transform 0.3s ease;
+}
+
+.p_text:hover img {
+	transform: scale(1.1);
+	
 }
 
 
 
 @media (max-width: 1100px) {
 	
+	.p_text img{
+
+	width: 100%;
+	/* Займатиме 100% ширини батьківського контейнера */
+	max-width: 40px;
+	/* Максимальна ширина - 400px */
+	height: auto;
+	/* Автоматична висота, щоб зберігати пропорції */
+	margin-right: 15px;
+	
+}
 
 .content {
    
@@ -238,7 +268,17 @@ margin-left: 40px;
 	padding-top: 80px;
    
 }
+	.p_text img{
 
+	width: 100%;
+	/* Займатиме 100% ширини батьківського контейнера */
+	max-width: 30px;
+	/* Максимальна ширина - 400px */
+	height: auto;
+	/* Автоматична висота, щоб зберігати пропорції */
+	margin-right: 10px;
+	
+}
 
 	
 }
@@ -259,7 +299,7 @@ margin-left: 40px;
 	border-radius: 20px;
 	
 }
-@media (max-width: 1275px) {
+@media (max-width: 1920px) {
 .img_container {
 border-radius: 0px;
 
@@ -274,6 +314,8 @@ border-radius: 0px;
 }
 
 
+
+
 .overlay {
     position: absolute;
     top: 0;
@@ -286,15 +328,21 @@ border-radius: 0px;
     align-items: flex-start;
     color: white;
     
-    background: rgba(0, 0, 0, 0.4); /* менш помітне напівпрозоре чорне тло */
+    background: rgba(0, 0, 0, 0.5); /* менш помітне напівпрозоре чорне тло */
     padding: 20px;
     transition: background 0.3s ease; /* Плавна зміна фону при наведенні */
 }
 
+.overlay:hover {
+	 background: rgba(0, 0, 0, 0.6); /* менш помітне напівпрозоре чорне тло */
+	
+}
+
+
 .overlay span {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 	padding-left: 30px;
-	font-size: 45px;
+	font-size: 35px;
 	font-weight: 700;
 }
 .overlay p {
@@ -310,11 +358,11 @@ border-radius: 0px;
     background-color: #00a43c; /* Колір фону кнопки */
     color: white; /* Колір тексту */
     text-decoration: none; /* Відключення стандартного оформлення посилання */
-    border-radius: 20px; /* Закруглення кутів кнопки */
+    border-radius: 30px; /* Закруглення кутів кнопки */
     transition: background-color 0.3s ease; /* Плавна зміна кольору фону при наведенні */
 	transition: transform 0.3s ease;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-	font-size: 25px;
+	font-size: 22px;
 	font-weight: 800;
 }
 
@@ -334,7 +382,35 @@ border-radius: 0px;
     background: radial-gradient(circle, transparent, rgba(0, 164, 60, 0.5)); /* димка кольору #00a43c */
     opacity: 1; /* Забезпечення видимості димки */
 }
+@media (max-width: 1100px) {
 
+	.img_container {
+border-radius: 0px;
+
+}
+	.overlay span {
+    margin-bottom: 20px;
+	padding-left: 10px;
+	font-size: 24px;
+	font-weight: 800;
+}
+	.overlay a {
+    display: inline-block;
+    padding: 5px 10px; /* Розміри відступів кнопки */
+    background-color: #00a43c; /* Колір фону кнопки */
+    color: white; /* Колір тексту */
+    text-decoration: none; /* Відключення стандартного оформлення посилання */
+    border-radius: 20px; /* Закруглення кутів кнопки */
+    transition: background-color 0.3s ease; /* Плавна зміна кольору фону при наведенні */
+	transition: transform 0.3s ease;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+	font-size: 16px;
+	font-weight: 800;
+}
+	
+	
+
+}
 @media (max-width: 800px) {
 
 	.img_container {
@@ -342,7 +418,7 @@ border-radius: 0px;
 
 }
 	.overlay span {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 	padding-left: 10px;
 	font-size: 18px;
 	font-weight: 800;
@@ -353,11 +429,11 @@ border-radius: 0px;
     background-color: #00a43c; /* Колір фону кнопки */
     color: white; /* Колір тексту */
     text-decoration: none; /* Відключення стандартного оформлення посилання */
-    border-radius: 0px; /* Закруглення кутів кнопки */
+    border-radius: 20px; /* Закруглення кутів кнопки */
     transition: background-color 0.3s ease; /* Плавна зміна кольору фону при наведенні */
 	transition: transform 0.3s ease;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 800;
 }
 	
@@ -371,9 +447,9 @@ border-radius: 0px;
 
 }
 	.overlay span {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 	padding-left: 5px;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 700;
 }
 	.overlay a {
@@ -382,11 +458,40 @@ border-radius: 0px;
     background-color: #00a43c; /* Колір фону кнопки */
     color: white; /* Колір тексту */
     text-decoration: none; /* Відключення стандартного оформлення посилання */
-    border-radius: 0px; /* Закруглення кутів кнопки */
+    border-radius: 20px; /* Закруглення кутів кнопки */
     transition: background-color 0.3s ease; /* Плавна зміна кольору фону при наведенні */
 	transition: transform 0.3s ease;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 	font-size: 14px;
+	font-weight: 800;
+}
+	
+	
+
+}
+@media (max-width: 420px) {
+
+	.img_container {
+border-radius: 0px;
+
+}
+	.overlay span {
+    margin-bottom: 10px;
+	padding-left: 5px;
+	font-size: 14px;
+	font-weight: 700;
+}
+	.overlay a {
+    display: inline-block;
+    padding: 5px 5px; /* Розміри відступів кнопки */
+    background-color: #00a43c; /* Колір фону кнопки */
+    color: white; /* Колір тексту */
+    text-decoration: none; /* Відключення стандартного оформлення посилання */
+    border-radius: 10px; /* Закруглення кутів кнопки */
+    transition: background-color 0.3s ease; /* Плавна зміна кольору фону при наведенні */
+	transition: transform 0.3s ease;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+	font-size: 12px;
 	font-weight: 800;
 }
 	
